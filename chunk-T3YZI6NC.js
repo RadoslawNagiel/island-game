@@ -7,7 +7,7 @@ import {
   setClassMetadata,
   tap,
   ɵɵdefineInjectable
-} from "./chunk-FUQELXHB.js";
+} from "./chunk-3EJW5EIV.js";
 
 // src/environments/environment.ts
 var environment = {
@@ -16,17 +16,17 @@ var environment = {
 };
 
 // src/services/api/auth.ts
-var API_URL = `${environment.apiUrl}/auth`;
+var API_URL = environment.apiUrl;
 var AuthService = class _AuthService {
   httpClient = inject(HttpClient);
   router = inject(Router);
   async register(nick, password) {
-    return firstValueFrom(this.httpClient.post(`${API_URL}/register`, { nick, password }).pipe(tap((res) => {
+    return firstValueFrom(this.httpClient.post(`${API_URL}/auth/register`, { nick, password }).pipe(tap((res) => {
       localStorage.setItem("token", res.accessToken);
     })));
   }
   async login(nick, password) {
-    return firstValueFrom(this.httpClient.post(`${API_URL}/login`, { nick, password }).pipe(tap((res) => {
+    return firstValueFrom(this.httpClient.post(`${API_URL}/auth/login`, { nick, password }).pipe(tap((res) => {
       localStorage.setItem("token", res.accessToken);
     })));
   }
@@ -50,6 +50,7 @@ var AuthService = class _AuthService {
 })();
 
 export {
+  API_URL,
   AuthService
 };
-//# sourceMappingURL=chunk-XAVCDGRK.js.map
+//# sourceMappingURL=chunk-T3YZI6NC.js.map

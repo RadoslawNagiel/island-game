@@ -9,7 +9,7 @@ import {
 import {
   ButtonComponent,
   HeaderComponent
-} from "./chunk-R3G72D33.js";
+} from "./chunk-SZG24YRJ.js";
 import {
   CommonModule,
   Component,
@@ -38,7 +38,7 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1
-} from "./chunk-FUQELXHB.js";
+} from "./chunk-3EJW5EIV.js";
 
 // src/app/wiki/wiki.ts
 var _forTrack0 = ($index, $item) => $item.type;
@@ -231,7 +231,7 @@ var WikiPage = class _WikiPage {
   static \u0275fac = function WikiPage_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _WikiPage)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _WikiPage, selectors: [["wiki-page"]], decls: 6, vars: 0, consts: [["title", "Encyklopedia Ro\u015Blin", "subtitle", "Przewodnik po florze \u015Bwiata gry"], ["text", "Gra", "routerLink", "/game"], ["text", "Generator Map", "routerLink", "/generator"], [1, "space-y-16", "p-12"], [1, "bg-zinc-900", "rounded-3xl", "overflow-hidden", "border", "border-zinc-800", "shadow-2xl"], [1, "relative", "h-48", "md:h-64", "overflow-hidden", "border-b", "border-zinc-800"], [1, "absolute", "inset-0", "bg-linear-to-r", "from-zinc-950/90", "via-zinc-900/60", "to-transparent", "z-10"], [1, "absolute", "inset-0", "w-full", "h-full", "object-cover", "opacity-60", 3, "src", "alt"], [1, "relative", "z-20", "h-full", "p-8", "md:p-12", "flex", "flex-col", "justify-center"], [1, "text-4xl", "md:text-5xl", "font-black", "text-white", "drop-shadow-lg"], [1, "mt-4", "inline-flex", "items-center", "gap-2", "bg-zinc-950/50", "px-4", "py-2", "rounded-lg", "w-max", "backdrop-blur-sm", "border", "border-zinc-700/50"], [1, "p-8", "md:p-12"], [1, "text-2xl", "font-semibold", "mb-8", "text-zinc-100", "border-l-4", "border-emerald-500", "pl-4"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "lg:grid-cols-3", "xl:grid-cols-4", "gap-8"], [1, "bg-zinc-950", "rounded-2xl", "p-6", "flex", "flex-col", "items-center", "text-center", "border", "border-zinc-800", "hover:border-emerald-500/50", "transition-colors", "group"], [1, "text-zinc-400", "font-medium"], [1, "text-emerald-400", "font-bold"], [1, "h-32", "w-32", "mb-6", "flex", "items-center", "justify-center", "p-2", "bg-zinc-900", "rounded-full", "border", "border-zinc-800", "group-hover:bg-zinc-800", "transition-colors"], [1, "max-h-full", "max-w-full", "object-contain", "drop-shadow-xl", 3, "src", "alt"], [1, "text-xl", "font-bold", "text-emerald-300", "mb-4"], [1, "w-full", "space-y-3", "text-sm", "text-left"], [1, "flex", "justify-between", "bg-zinc-900", "px-4", "py-2", "rounded-lg"], [1, "text-zinc-500"], [1, "text-emerald-400", "font-medium"], [1, "bg-zinc-900", "px-4", "py-3", "rounded-lg", "flex", "flex-col", "gap-2"], [1, "text-zinc-500", "mb-1"], [1, "text-zinc-400"], [1, "flex", "justify-between", "items-center"], [1, "text-left"], [1, "font-medium", "text-zinc-200"], [1, "text-zinc-500", "text-xs"], [1, "text-right"], [1, "flex", "flex-wrap", "gap-2", "justify-end"], [1, "text-zinc-400", "text-xs"], [1, "bg-zinc-800", "border", "border-zinc-700", "text-zinc-300", "text-xs", "px-2", "py-1", "rounded-md"]], template: function WikiPage_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _WikiPage, selectors: [["wiki-page"]], decls: 6, vars: 0, consts: [["title", "Odkryj \u015Awiat", "subtitle", "Przewodnik po florze \u015Bwiata gry"], ["text", "Generator Map", "routerLink", "/generator"], ["text", "Wejd\u017A do Gry", "routerLink", "/game"], [1, "space-y-8", "md:space-y-16", "p-4", "md:p-12"], [1, "bg-zinc-900", "rounded-3xl", "overflow-hidden", "border", "border-zinc-800", "shadow-2xl"], [1, "relative", "h-40", "md:h-64", "overflow-hidden", "border-b", "border-zinc-800"], [1, "absolute", "inset-0", "bg-linear-to-r", "from-zinc-950/90", "via-zinc-900/60", "to-transparent", "z-10"], [1, "absolute", "inset-0", "w-full", "h-full", "object-cover", "opacity-60", 3, "src", "alt"], [1, "relative", "z-20", "h-full", "p-4", "md:p-12", "flex", "flex-col", "justify-center"], [1, "text-4xl", "md:text-5xl", "font-black", "text-white", "drop-shadow-lg"], [1, "mt-4", "inline-flex", "items-center", "gap-2", "bg-zinc-950/50", "px-4", "py-2", "rounded-lg", "w-max", "backdrop-blur-sm", "border", "border-zinc-700/50"], [1, "p-4", "md:p-12"], [1, "text-2xl", "font-semibold", "mb-8", "text-zinc-100", "border-l-4", "border-emerald-500", "pl-4"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "lg:grid-cols-3", "xl:grid-cols-4", "gap-8"], [1, "bg-zinc-950", "rounded-2xl", "p-4", "md:p-6", "flex", "flex-col", "items-center", "text-center", "border", "border-zinc-800", "hover:border-emerald-500/50", "transition-colors", "group"], [1, "text-zinc-400", "font-medium"], [1, "text-emerald-400", "font-bold"], [1, "h-32", "w-32", "mb-6", "flex", "items-center", "justify-center", "p-2", "bg-zinc-900", "rounded-full", "border", "border-zinc-800", "group-hover:bg-zinc-800", "transition-colors"], [1, "max-h-full", "max-w-full", "object-contain", "drop-shadow-xl", 3, "src", "alt"], [1, "text-xl", "font-bold", "text-emerald-300", "mb-4"], [1, "w-full", "space-y-3", "text-sm", "text-left"], [1, "flex", "justify-between", "bg-zinc-900", "px-4", "py-2", "rounded-lg"], [1, "text-zinc-500"], [1, "text-emerald-400", "font-medium"], [1, "bg-zinc-900", "px-4", "py-3", "rounded-lg", "flex", "flex-col", "gap-2"], [1, "text-zinc-500", "mb-1"], [1, "text-zinc-400"], [1, "flex", "justify-between", "items-center"], [1, "text-left"], [1, "font-medium", "text-zinc-200"], [1, "text-zinc-500", "text-xs"], [1, "text-right"], [1, "flex", "flex-wrap", "gap-2", "justify-end"], [1, "text-zinc-400", "text-xs"], [1, "bg-zinc-800", "border", "border-zinc-700", "text-zinc-300", "text-xs", "px-2", "py-1", "rounded-md"]], template: function WikiPage_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "app-header", 0);
       \u0275\u0275element(1, "app-button", 1)(2, "app-button", 2);
@@ -249,20 +249,20 @@ var WikiPage = class _WikiPage {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(WikiPage, [{
     type: Component,
-    args: [{ selector: "wiki-page", imports: [CommonModule, PercentPipe, ButtonComponent, HeaderComponent, RouterLink], standalone: true, template: `<app-header title="Encyklopedia Ro\u015Blin" subtitle="Przewodnik po florze \u015Bwiata gry">
-  <app-button text="Gra" routerLink="/game" />
+    args: [{ selector: "wiki-page", imports: [CommonModule, PercentPipe, ButtonComponent, HeaderComponent, RouterLink], standalone: true, template: `<app-header title="Odkryj \u015Awiat" subtitle="Przewodnik po florze \u015Bwiata gry">
   <app-button text="Generator Map" routerLink="/generator" />
+  <app-button text="Wejd\u017A do Gry" routerLink="/game" />
 </app-header>
 
-<div class="space-y-16 p-12">
+<div class="space-y-8 md:space-y-16 p-4 md:p-12">
   @for (biome of wikiData(); track biome.type) {
     <section class="bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl">
-      <div class="relative h-48 md:h-64 overflow-hidden border-b border-zinc-800">
+      <div class="relative h-40 md:h-64 overflow-hidden border-b border-zinc-800">
         <div class="absolute inset-0 bg-linear-to-r from-zinc-950/90 via-zinc-900/60 to-transparent z-10"></div>
 
         <img [src]="biome.image" [alt]="biome.name" class="absolute inset-0 w-full h-full object-cover opacity-60" />
 
-        <div class="relative z-20 h-full p-8 md:p-12 flex flex-col justify-center">
+        <div class="relative z-20 h-full p-4 md:p-12 flex flex-col justify-center">
           <h2 class="text-4xl md:text-5xl font-black text-white drop-shadow-lg">{{ biome.name }}</h2>
           @if (biome.plants.length) {
             <div class="mt-4 inline-flex items-center gap-2 bg-zinc-950/50 px-4 py-2 rounded-lg w-max backdrop-blur-sm border border-zinc-700/50">
@@ -273,7 +273,7 @@ var WikiPage = class _WikiPage {
         </div>
       </div>
 
-      <div class="p-8 md:p-12">
+      <div class="p-4 md:p-12">
         <h3 class="text-2xl font-semibold mb-8 text-zinc-100 border-l-4 border-emerald-500 pl-4">
           {{ biome.plants.length ? 'Ro\u015Bliny w tym regionie' : 'Brak ro\u015Blin w tym regionie' }}
         </h3>
@@ -281,7 +281,7 @@ var WikiPage = class _WikiPage {
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           @for (plant of biome.plants; track plant.id) {
             <article
-              class="bg-zinc-950 rounded-2xl p-6 flex flex-col items-center text-center border border-zinc-800 hover:border-emerald-500/50 transition-colors group"
+              class="bg-zinc-950 rounded-2xl p-4 md:p-6 flex flex-col items-center text-center border border-zinc-800 hover:border-emerald-500/50 transition-colors group"
             >
               <div
                 class="h-32 w-32 mb-6 flex items-center justify-center p-2 bg-zinc-900 rounded-full border border-zinc-800 group-hover:bg-zinc-800 transition-colors"
@@ -342,4 +342,4 @@ var WikiPage = class _WikiPage {
 export {
   WikiPage
 };
-//# sourceMappingURL=chunk-Q74S4KWE.js.map
+//# sourceMappingURL=chunk-UKC2CSEG.js.map

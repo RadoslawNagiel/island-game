@@ -30783,6 +30783,15 @@ function provideHttpClient(...features) {
   }
   return makeEnvironmentProviders(providers);
 }
+function withInterceptors(interceptorFns) {
+  return makeHttpFeature(HttpFeatureKind.Interceptors, interceptorFns.map((interceptorFn) => {
+    return {
+      provide: HTTP_INTERCEPTOR_FNS,
+      useValue: interceptorFn,
+      multi: true
+    };
+  }));
+}
 var LEGACY_INTERCEPTOR_FN = new InjectionToken(typeof ngDevMode !== "undefined" && ngDevMode ? "LEGACY_INTERCEPTOR_FN" : "");
 function withInterceptorsFromDi() {
   return makeHttpFeature(HttpFeatureKind.LegacyInterceptors, [{
@@ -37015,6 +37024,7 @@ export {
   firstValueFrom,
   map,
   forkJoin,
+  catchError,
   tap,
   Version,
   RuntimeError,
@@ -37077,16 +37087,12 @@ export {
   ɵɵprojection,
   ɵɵviewQuerySignal,
   ɵɵqueryAdvance,
-  ɵɵreference,
   ɵɵstyleProp,
   ɵɵclassProp,
   ɵɵtext,
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1,
   ɵɵtextInterpolate2,
-  ɵɵtwoWayProperty,
-  ɵɵtwoWayBindingSet,
-  ɵɵtwoWayListener,
   ɵɵProvidersFeature,
   ɵɵpureFunction1,
   ɵɵpipe,
@@ -37113,6 +37119,8 @@ export {
   CommonModule,
   bootstrapApplication,
   HttpClient,
+  provideHttpClient,
+  withInterceptors,
   RouterOutlet,
   Router,
   RouterLink,
@@ -37149,4 +37157,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-FUQELXHB.js.map
+//# sourceMappingURL=chunk-3EJW5EIV.js.map

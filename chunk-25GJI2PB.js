@@ -1,6 +1,7 @@
 import {
   ApplicationRef,
   ChangeDetectorRef,
+  Component,
   DestroyRef,
   Directive,
   ElementRef,
@@ -30,25 +31,41 @@ import {
   from,
   getDOM,
   inject,
+  input,
   isPromise,
   isSubscribable,
   map,
   setClassMetadata,
   signal,
   untracked,
+  ɵsetClassDebugInfo,
   ɵɵInheritDefinitionFeature,
   ɵɵNgOnChangesFeature,
   ɵɵProvidersFeature,
+  ɵɵadvance,
   ɵɵattribute,
   ɵɵclassProp,
+  ɵɵconditional,
+  ɵɵconditionalCreate,
+  ɵɵdefineComponent,
   ɵɵdefineDirective,
   ɵɵdefineInjectable,
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵdirectiveInject,
+  ɵɵdomElementEnd,
+  ɵɵdomElementStart,
+  ɵɵdomListener,
+  ɵɵdomProperty,
   ɵɵgetInheritedFactory,
-  ɵɵlistener
-} from "./chunk-FUQELXHB.js";
+  ɵɵlistener,
+  ɵɵnextContext,
+  ɵɵprojection,
+  ɵɵprojectionDef,
+  ɵɵtext,
+  ɵɵtextInterpolate,
+  ɵɵtextInterpolate1
+} from "./chunk-3EJW5EIV.js";
 
 // node_modules/@angular/forms/fesm2022/forms.mjs
 var BaseControlValueAccessor = class _BaseControlValueAccessor {
@@ -4099,9 +4116,9 @@ var AbstractValidatorDirective = class _AbstractValidatorDirective {
   _enabled;
   ngOnChanges(changes) {
     if (this.inputName in changes) {
-      const input = this.normalizeInput(changes[this.inputName].currentValue);
-      this._enabled = this.enabled(input);
-      this._validator = this._enabled ? this.createValidator(input) : nullValidator;
+      const input2 = this.normalizeInput(changes[this.inputName].currentValue);
+      this._enabled = this.enabled(input2);
+      this._validator = this._enabled ? this.createValidator(input2) : nullValidator;
       if (this._onChange) {
         this._onChange();
       }
@@ -4113,8 +4130,8 @@ var AbstractValidatorDirective = class _AbstractValidatorDirective {
   registerOnValidatorChange(fn) {
     this._onChange = fn;
   }
-  enabled(input) {
-    return input != null;
+  enabled(input2) {
+    return input2 != null;
   }
   static \u0275fac = function AbstractValidatorDirective_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AbstractValidatorDirective)();
@@ -4137,7 +4154,7 @@ var MAX_VALIDATOR = {
 var MaxValidator = class _MaxValidator extends AbstractValidatorDirective {
   max;
   inputName = "max";
-  normalizeInput = (input) => toFloat(input);
+  normalizeInput = (input2) => toFloat(input2);
   createValidator = (max) => maxValidator(max);
   static \u0275fac = /* @__PURE__ */ (() => {
     let \u0275MaxValidator_BaseFactory;
@@ -4186,7 +4203,7 @@ var MIN_VALIDATOR = {
 var MinValidator = class _MinValidator extends AbstractValidatorDirective {
   min;
   inputName = "min";
-  normalizeInput = (input) => toFloat(input);
+  normalizeInput = (input2) => toFloat(input2);
   createValidator = (min) => minValidator(min);
   static \u0275fac = /* @__PURE__ */ (() => {
     let \u0275MinValidator_BaseFactory;
@@ -4241,9 +4258,9 @@ var RequiredValidator = class _RequiredValidator extends AbstractValidatorDirect
   required;
   inputName = "required";
   normalizeInput = booleanAttribute;
-  createValidator = (input) => requiredValidator;
-  enabled(input) {
-    return input;
+  createValidator = (input2) => requiredValidator;
+  enabled(input2) {
+    return input2;
   }
   static \u0275fac = /* @__PURE__ */ (() => {
     let \u0275RequiredValidator_BaseFactory;
@@ -4285,7 +4302,7 @@ var RequiredValidator = class _RequiredValidator extends AbstractValidatorDirect
   });
 })();
 var CheckboxRequiredValidator = class _CheckboxRequiredValidator extends RequiredValidator {
-  createValidator = (input) => requiredTrueValidator;
+  createValidator = (input2) => requiredTrueValidator;
   static \u0275fac = /* @__PURE__ */ (() => {
     let \u0275CheckboxRequiredValidator_BaseFactory;
     return function CheckboxRequiredValidator_Factory(__ngFactoryType__) {
@@ -4327,9 +4344,9 @@ var EmailValidator = class _EmailValidator extends AbstractValidatorDirective {
   email;
   inputName = "email";
   normalizeInput = booleanAttribute;
-  createValidator = (input) => emailValidator;
-  enabled(input) {
-    return input;
+  createValidator = (input2) => emailValidator;
+  enabled(input2) {
+    return input2;
   }
   static \u0275fac = /* @__PURE__ */ (() => {
     let \u0275EmailValidator_BaseFactory;
@@ -4369,7 +4386,7 @@ var MIN_LENGTH_VALIDATOR = {
 var MinLengthValidator = class _MinLengthValidator extends AbstractValidatorDirective {
   minlength;
   inputName = "minlength";
-  normalizeInput = (input) => toInteger(input);
+  normalizeInput = (input2) => toInteger(input2);
   createValidator = (minlength) => minLengthValidator(minlength);
   static \u0275fac = /* @__PURE__ */ (() => {
     let \u0275MinLengthValidator_BaseFactory;
@@ -4418,7 +4435,7 @@ var MAX_LENGTH_VALIDATOR = {
 var MaxLengthValidator = class _MaxLengthValidator extends AbstractValidatorDirective {
   maxlength;
   inputName = "maxlength";
-  normalizeInput = (input) => toInteger(input);
+  normalizeInput = (input2) => toInteger(input2);
   createValidator = (maxlength) => maxLengthValidator(maxlength);
   static \u0275fac = /* @__PURE__ */ (() => {
     let \u0275MaxLengthValidator_BaseFactory;
@@ -4467,8 +4484,8 @@ var PATTERN_VALIDATOR = {
 var PatternValidator = class _PatternValidator extends AbstractValidatorDirective {
   pattern;
   inputName = "pattern";
-  normalizeInput = (input) => input;
-  createValidator = (input) => patternValidator(input);
+  normalizeInput = (input2) => input2;
+  createValidator = (input2) => patternValidator(input2);
   static \u0275fac = /* @__PURE__ */ (() => {
     let \u0275PatternValidator_BaseFactory;
     return function PatternValidator_Factory(__ngFactoryType__) {
@@ -4728,23 +4745,119 @@ var ReactiveFormsModule = class _ReactiveFormsModule {
   }], null, null);
 })();
 
+// src/components/dump/input/input.ts
+var _c0 = [[["", "customError", ""]]];
+var _c1 = ["[customError]"];
+function InputComponent_Conditional_4_Conditional_2_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275text(0);
+  }
+  if (rf & 2) {
+    const ctx_r0 = \u0275\u0275nextContext(2);
+    \u0275\u0275textInterpolate1(" ", ctx_r0.errorMessage(), " ");
+  }
+}
+function InputComponent_Conditional_4_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "div", 2);
+    \u0275\u0275projection(1);
+    \u0275\u0275conditionalCreate(2, InputComponent_Conditional_4_Conditional_2_Template, 1, 1);
+    \u0275\u0275domElementEnd();
+  }
+  if (rf & 2) {
+    const ctx_r0 = \u0275\u0275nextContext();
+    \u0275\u0275advance(2);
+    \u0275\u0275conditional((ctx_r0.ngControl == null ? null : ctx_r0.ngControl.touched) && (ctx_r0.ngControl == null ? null : ctx_r0.ngControl.invalid) ? 2 : -1);
+  }
+}
+var InputComponent = class _InputComponent {
+  label = input.required(...ngDevMode ? [{ debugName: "label" }] : []);
+  type = input("text", ...ngDevMode ? [{ debugName: "type" }] : []);
+  placeholder = input("", ...ngDevMode ? [{ debugName: "placeholder" }] : []);
+  errorMessage = input("", ...ngDevMode ? [{ debugName: "errorMessage" }] : []);
+  keepErrorSpace = input(true, ...ngDevMode ? [{ debugName: "keepErrorSpace" }] : []);
+  ngControl = inject(NgControl, { optional: true, self: true });
+  value = "";
+  disabled = false;
+  constructor() {
+    if (this.ngControl) {
+      this.ngControl.valueAccessor = this;
+    }
+  }
+  onChange = () => {
+  };
+  onTouched = () => {
+  };
+  writeValue(value) {
+    this.value = value || "";
+  }
+  registerOnChange(fn) {
+    this.onChange = fn;
+  }
+  registerOnTouched(fn) {
+    this.onTouched = fn;
+  }
+  setDisabledState(isDisabled) {
+    this.disabled = isDisabled;
+  }
+  onInput(event) {
+    const val = event.target.value;
+    this.value = val;
+    this.onChange(val);
+  }
+  static \u0275fac = function InputComponent_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _InputComponent)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _InputComponent, selectors: [["app-input"]], inputs: { label: [1, "label"], type: [1, "type"], placeholder: [1, "placeholder"], errorMessage: [1, "errorMessage"], keepErrorSpace: [1, "keepErrorSpace"] }, ngContentSelectors: _c1, decls: 5, vars: 12, consts: [[1, "block", "text-zinc-400", "text-sm", "mb-1"], [1, "w-full", "px-4", "py-2", "bg-zinc-950", "border", "border-zinc-800", "rounded-lg", "focus:outline-none", "focus:ring-2", "focus:ring-emerald-500", "disabled:opacity-50", 3, "input", "blur", "type", "placeholder", "value", "disabled"], [1, "text-rose-400", "text-sm", "my-1", "min-h-5"]], template: function InputComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275projectionDef(_c0);
+      \u0275\u0275domElementStart(0, "div")(1, "label", 0);
+      \u0275\u0275text(2);
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(3, "input", 1);
+      \u0275\u0275domListener("input", function InputComponent_Template_input_input_3_listener($event) {
+        return ctx.onInput($event);
+      })("blur", function InputComponent_Template_input_blur_3_listener() {
+        return ctx.onTouched();
+      });
+      \u0275\u0275domElementEnd();
+      \u0275\u0275conditionalCreate(4, InputComponent_Conditional_4_Template, 3, 1, "div", 2);
+      \u0275\u0275domElementEnd();
+    }
+    if (rf & 2) {
+      \u0275\u0275advance(2);
+      \u0275\u0275textInterpolate(ctx.label());
+      \u0275\u0275advance();
+      \u0275\u0275classProp("!ring-rose-400", (ctx.ngControl == null ? null : ctx.ngControl.touched) && (ctx.ngControl == null ? null : ctx.ngControl.invalid))("!border-rose-400", (ctx.ngControl == null ? null : ctx.ngControl.touched) && (ctx.ngControl == null ? null : ctx.ngControl.invalid))("text-rose-400", (ctx.ngControl == null ? null : ctx.ngControl.touched) && (ctx.ngControl == null ? null : ctx.ngControl.invalid));
+      \u0275\u0275domProperty("type", ctx.type())("placeholder", ctx.placeholder())("value", ctx.value)("disabled", ctx.disabled);
+      \u0275\u0275advance();
+      \u0275\u0275conditional(ctx.keepErrorSpace() ? 4 : -1);
+    }
+  }, encapsulation: 2 });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(InputComponent, [{
+    type: Component,
+    args: [{ selector: "app-input", standalone: true, template: '<div>\r\n  <label class="block text-zinc-400 text-sm mb-1">{{ label() }}</label>\r\n  <input\r\n    [type]="type()"\r\n    [placeholder]="placeholder()"\r\n    [value]="value"\r\n    [disabled]="disabled"\r\n    (input)="onInput($event)"\r\n    (blur)="onTouched()"\r\n    class="w-full px-4 py-2 bg-zinc-950 border border-zinc-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-50"\r\n    [class.!ring-rose-400]="ngControl?.touched && ngControl?.invalid"\r\n    [class.!border-rose-400]="ngControl?.touched && ngControl?.invalid"\r\n    [class.text-rose-400]="ngControl?.touched && ngControl?.invalid"\r\n  />\r\n\r\n  @if (keepErrorSpace()) {\r\n    <div class="text-rose-400 text-sm my-1 min-h-5">\r\n      <ng-content select="[customError]"></ng-content>\r\n      @if (ngControl?.touched && ngControl?.invalid) {\r\n        {{ errorMessage() }}\r\n      }\r\n    </div>\r\n  }\r\n</div>\r\n' }]
+  }], () => [], { label: [{ type: Input, args: [{ isSignal: true, alias: "label", required: true }] }], type: [{ type: Input, args: [{ isSignal: true, alias: "type", required: false }] }], placeholder: [{ type: Input, args: [{ isSignal: true, alias: "placeholder", required: false }] }], errorMessage: [{ type: Input, args: [{ isSignal: true, alias: "errorMessage", required: false }] }], keepErrorSpace: [{ type: Input, args: [{ isSignal: true, alias: "keepErrorSpace", required: false }] }] });
+})();
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(InputComponent, { className: "InputComponent", filePath: "src/components/dump/input/input.ts", lineNumber: 10 });
+})();
+
 export {
-  DefaultValueAccessor,
   Validators,
-  NgControl,
   NgControlStatus,
   NgControlStatusGroup,
-  NgModel,
+  FormControl,
   ɵNgNoValidate,
-  NumberValueAccessor,
+  FormControlDirective,
   FormControlName,
   FormGroupDirective,
-  MaxValidator,
-  MinValidator,
-  RequiredValidator,
   FormBuilder,
   FormsModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
+  InputComponent
 };
 /*! Bundled license information:
 
@@ -4755,4 +4868,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-YLZFPBEZ.js.map
+//# sourceMappingURL=chunk-25GJI2PB.js.map
